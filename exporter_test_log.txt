@@ -1,0 +1,253 @@
+$ python exporter_test.py
+svg_path: test-dirs\input\drawing 1.svg
+svg_name: drawing 1
+png_path: test-dirs\regular\drawing 1.png
+
+svg_path: test-dirs\input\drawing 2.svg
+svg_name: drawing 2
+png_path: test-dirs\regular\drawing 2.png
+
+Inkscape path: C:\Program Files\Inkscape\inkscape.exe
+
+===Test export_svgs===
+
+Export with height specified; see test-dirs\regular\height
+
+Background RRGGBBAA: ffffff00
+Area 0:0:1024:1024 exported to 48 x 36 pixels (3.16406 dpi)
+Bitmap saved as: test-dirs\regular\height\drawing 1.png
+
+Background RRGGBBAA: ffffff00
+Area 0:0:1024:512 exported to 48 x 36 pixels (6.32813 dpi)
+Bitmap saved as: test-dirs\regular\height\drawing 2.png
+
+Export using auto-height; see test-dirs\regular\height-auto
+
+Background RRGGBBAA: ffffff00
+Area 0:0:1024:1024 exported to 48 x 48 pixels (4.21875 dpi)
+Bitmap saved as: test-dirs\regular\height-auto\drawing 1.png
+
+Background RRGGBBAA: ffffff00
+Area 0:0:1024:512 exported to 48 x 24 pixels (4.21875 dpi)
+Bitmap saved as: test-dirs\regular\height-auto\drawing 2.png
+
+===Test export_svgs_android_densities===
+
+Export drawable with height specified; see test-dirs\android\drawable
+
+Background RRGGBBAA: ffffff00
+Area 0:0:1024:1024 exported to 24 x 18 pixels (1.58203 dpi)
+Bitmap saved as: test-dirs\android\drawable\drawable-mdpi\drawing 1.png
+
+Background RRGGBBAA: ffffff00
+Area 0:0:1024:512 exported to 24 x 18 pixels (3.16406 dpi)
+Bitmap saved as: test-dirs\android\drawable\drawable-mdpi\drawing 2.png
+
+Background RRGGBBAA: ffffff00
+Area 0:0:1024:1024 exported to 36 x 27 pixels (2.37305 dpi)
+Bitmap saved as: test-dirs\android\drawable\drawable-hdpi\drawing 1.png
+
+Background RRGGBBAA: ffffff00
+Area 0:0:1024:512 exported to 36 x 27 pixels (4.74609 dpi)
+Bitmap saved as: test-dirs\android\drawable\drawable-hdpi\drawing 2.png
+
+Background RRGGBBAA: ffffff00
+Area 0:0:1024:1024 exported to 48 x 36 pixels (3.16406 dpi)
+Bitmap saved as: test-dirs\android\drawable\drawable-xhdpi\drawing 1.png
+
+Background RRGGBBAA: ffffff00
+Area 0:0:1024:512 exported to 48 x 36 pixels (6.32813 dpi)
+Bitmap saved as: test-dirs\android\drawable\drawable-xhdpi\drawing 2.png
+
+Background RRGGBBAA: ffffff00
+Area 0:0:1024:1024 exported to 72 x 54 pixels (4.74609 dpi)
+Bitmap saved as: test-dirs\android\drawable\drawable-xxhdpi\drawing 1.png
+
+Background RRGGBBAA: ffffff00
+Area 0:0:1024:512 exported to 72 x 54 pixels (9.49219 dpi)
+Bitmap saved as: test-dirs\android\drawable\drawable-xxhdpi\drawing 2.png
+
+Background RRGGBBAA: ffffff00
+Area 0:0:1024:1024 exported to 96 x 72 pixels (6.32813 dpi)
+Bitmap saved as: test-dirs\android\drawable\drawable-xxxhdpi\drawing 1.png
+
+Background RRGGBBAA: ffffff00
+Area 0:0:1024:512 exported to 96 x 72 pixels (12.6563 dpi)
+Bitmap saved as: test-dirs\android\drawable\drawable-xxxhdpi\drawing 2.png
+
+Export mipmap using auto-height; see test-dirs\android\mipmap
+
+Background RRGGBBAA: ffffff00
+Area 0:0:1024:1024 exported to 24 x 24 pixels (2.10938 dpi)
+Bitmap saved as: test-dirs\android\mipmap\mipmap-mdpi\drawing 1.png
+
+Background RRGGBBAA: ffffff00
+Area 0:0:1024:512 exported to 24 x 12 pixels (2.10938 dpi)
+Bitmap saved as: test-dirs\android\mipmap\mipmap-mdpi\drawing 2.png
+
+Background RRGGBBAA: ffffff00
+Area 0:0:1024:1024 exported to 36 x 36 pixels (3.16406 dpi)
+Bitmap saved as: test-dirs\android\mipmap\mipmap-hdpi\drawing 1.png
+
+Background RRGGBBAA: ffffff00
+Area 0:0:1024:512 exported to 36 x 18 pixels (3.16406 dpi)
+Bitmap saved as: test-dirs\android\mipmap\mipmap-hdpi\drawing 2.png
+
+Background RRGGBBAA: ffffff00
+Area 0:0:1024:1024 exported to 48 x 48 pixels (4.21875 dpi)
+Bitmap saved as: test-dirs\android\mipmap\mipmap-xhdpi\drawing 1.png
+
+Background RRGGBBAA: ffffff00
+Area 0:0:1024:512 exported to 48 x 24 pixels (4.21875 dpi)
+Bitmap saved as: test-dirs\android\mipmap\mipmap-xhdpi\drawing 2.png
+
+Background RRGGBBAA: ffffff00
+Area 0:0:1024:1024 exported to 72 x 72 pixels (6.32813 dpi)
+Bitmap saved as: test-dirs\android\mipmap\mipmap-xxhdpi\drawing 1.png
+
+Background RRGGBBAA: ffffff00
+Area 0:0:1024:512 exported to 72 x 36 pixels (6.32813 dpi)
+Bitmap saved as: test-dirs\android\mipmap\mipmap-xxhdpi\drawing 2.png
+
+Background RRGGBBAA: ffffff00
+Area 0:0:1024:1024 exported to 96 x 96 pixels (8.4375 dpi)
+Bitmap saved as: test-dirs\android\mipmap\mipmap-xxxhdpi\drawing 1.png
+
+Background RRGGBBAA: ffffff00
+Area 0:0:1024:512 exported to 96 x 48 pixels (8.4375 dpi)
+Bitmap saved as: test-dirs\android\mipmap\mipmap-xxxhdpi\drawing 2.png
+
+===Test command line invocations===
+
+python exporter.py -i test-dirs/input -o test-dirs/cmd/cmd1 -height 36 -a True -d True -v True 48
+
+Namespace(height=36, inkscape_path='C:\\Program Files\\Inkscape\\inkscape.exe', input_dir='test-dirs/input', is_android='True', is_drawable='True', is_verbose='True', output_dir='test-dirs/cmd/cmd1', width=48)
+
+Background RRGGBBAA: ffffff00
+Area 0:0:1024:1024 exported to 48 x 36 pixels (3.16406 dpi)
+Bitmap saved as: test-dirs/cmd/cmd1\drawable-mdpi\drawing 1.png
+
+Background RRGGBBAA: ffffff00
+Area 0:0:1024:512 exported to 48 x 36 pixels (6.32813 dpi)
+Bitmap saved as: test-dirs/cmd/cmd1\drawable-mdpi\drawing 2.png
+
+Background RRGGBBAA: ffffff00
+Area 0:0:1024:1024 exported to 72 x 54 pixels (4.74609 dpi)
+Bitmap saved as: test-dirs/cmd/cmd1\drawable-hdpi\drawing 1.png
+
+Background RRGGBBAA: ffffff00
+Area 0:0:1024:512 exported to 72 x 54 pixels (9.49219 dpi)
+Bitmap saved as: test-dirs/cmd/cmd1\drawable-hdpi\drawing 2.png
+
+Background RRGGBBAA: ffffff00
+Area 0:0:1024:1024 exported to 96 x 72 pixels (6.32813 dpi)
+Bitmap saved as: test-dirs/cmd/cmd1\drawable-xhdpi\drawing 1.png
+
+Background RRGGBBAA: ffffff00
+Area 0:0:1024:512 exported to 96 x 72 pixels (12.6563 dpi)
+Bitmap saved as: test-dirs/cmd/cmd1\drawable-xhdpi\drawing 2.png
+
+Background RRGGBBAA: ffffff00
+Area 0:0:1024:1024 exported to 144 x 108 pixels (9.49219 dpi)
+Bitmap saved as: test-dirs/cmd/cmd1\drawable-xxhdpi\drawing 1.png
+
+Background RRGGBBAA: ffffff00
+Area 0:0:1024:512 exported to 144 x 108 pixels (18.9844 dpi)
+Bitmap saved as: test-dirs/cmd/cmd1\drawable-xxhdpi\drawing 2.png
+
+Background RRGGBBAA: ffffff00
+Area 0:0:1024:1024 exported to 192 x 144 pixels (12.6563 dpi)
+Bitmap saved as: test-dirs/cmd/cmd1\drawable-xxxhdpi\drawing 1.png
+
+Background RRGGBBAA: ffffff00
+Area 0:0:1024:512 exported to 192 x 144 pixels (25.3125 dpi)
+Bitmap saved as: test-dirs/cmd/cmd1\drawable-xxxhdpi\drawing 2.png
+
+===
+
+python exporter.py -i test-dirs/input -o test-dirs/cmd/cmd2 -inkscape "C:\Program Files\Inkscape\inkscape.exe" -a True -d False -v False 48
+
+Namespace(height=None, inkscape_path='C:\\Program Files\\Inkscape\\inkscape.exe', input_dir='test-dirs/input', is_android='True', is_drawable='False', is_verbose='False', output_dir='test-dirs/cmd/cmd2', width=48)
+
+===
+
+python exporter.py -i test-dirs/input -o test-dirs/cmd/cmd3 -a True 48
+
+Namespace(height=None, inkscape_path='C:\\Program Files\\Inkscape\\inkscape.exe', input_dir='test-dirs/input', is_android='True', is_drawable='True', is_verbose='True', output_dir='test-dirs/cmd/cmd3', width=48)
+
+Background RRGGBBAA: ffffff00
+Area 0:0:1024:1024 exported to 48 x 48 pixels (4.21875 dpi)
+Bitmap saved as: test-dirs/cmd/cmd3\drawable-mdpi\drawing 1.png
+
+Background RRGGBBAA: ffffff00
+Area 0:0:1024:512 exported to 48 x 24 pixels (4.21875 dpi)
+Bitmap saved as: test-dirs/cmd/cmd3\drawable-mdpi\drawing 2.png
+
+Background RRGGBBAA: ffffff00
+Area 0:0:1024:1024 exported to 72 x 72 pixels (6.32813 dpi)
+Bitmap saved as: test-dirs/cmd/cmd3\drawable-hdpi\drawing 1.png
+
+Background RRGGBBAA: ffffff00
+Area 0:0:1024:512 exported to 72 x 36 pixels (6.32813 dpi)
+Bitmap saved as: test-dirs/cmd/cmd3\drawable-hdpi\drawing 2.png
+
+Background RRGGBBAA: ffffff00
+Area 0:0:1024:1024 exported to 96 x 96 pixels (8.4375 dpi)
+Bitmap saved as: test-dirs/cmd/cmd3\drawable-xhdpi\drawing 1.png
+
+Background RRGGBBAA: ffffff00
+Area 0:0:1024:512 exported to 96 x 48 pixels (8.4375 dpi)
+Bitmap saved as: test-dirs/cmd/cmd3\drawable-xhdpi\drawing 2.png
+
+Background RRGGBBAA: ffffff00
+Area 0:0:1024:1024 exported to 144 x 144 pixels (12.6563 dpi)
+Bitmap saved as: test-dirs/cmd/cmd3\drawable-xxhdpi\drawing 1.png
+
+Background RRGGBBAA: ffffff00
+Area 0:0:1024:512 exported to 144 x 72 pixels (12.6563 dpi)
+Bitmap saved as: test-dirs/cmd/cmd3\drawable-xxhdpi\drawing 2.png
+
+Background RRGGBBAA: ffffff00
+Area 0:0:1024:1024 exported to 192 x 192 pixels (16.875 dpi)
+Bitmap saved as: test-dirs/cmd/cmd3\drawable-xxxhdpi\drawing 1.png
+
+Background RRGGBBAA: ffffff00
+Area 0:0:1024:512 exported to 192 x 96 pixels (16.875 dpi)
+Bitmap saved as: test-dirs/cmd/cmd3\drawable-xxxhdpi\drawing 2.png
+
+===
+
+python exporter.py -i test-dirs/input -o test-dirs/cmd/cmd4 -a False 48
+
+Namespace(height=None, inkscape_path='C:\\Program Files\\Inkscape\\inkscape.exe', input_dir='test-dirs/input', is_android='False', is_drawable='True', is_verbose='True', output_dir='test-dirs/cmd/cmd4', width=48)
+
+Background RRGGBBAA: ffffff00
+Area 0:0:1024:1024 exported to 48 x 48 pixels (4.21875 dpi)
+Bitmap saved as: test-dirs/cmd/cmd4\drawing 1.png
+
+Background RRGGBBAA: ffffff00
+Area 0:0:1024:512 exported to 48 x 24 pixels (4.21875 dpi)
+Bitmap saved as: test-dirs/cmd/cmd4\drawing 2.png
+
+===
+
+python exporter.py -i test-dirs/input -o test-dirs/cmd/cmd5 -height 36 48
+
+Namespace(height=36, inkscape_path='C:\\Program Files\\Inkscape\\inkscape.exe', input_dir='test-dirs/input', is_android='False', is_drawable='True', is_verbose='True', output_dir='test-dirs/cmd/cmd5', width=48)
+
+Background RRGGBBAA: ffffff00
+Area 0:0:1024:1024 exported to 48 x 36 pixels (3.16406 dpi)
+Bitmap saved as: test-dirs/cmd/cmd5\drawing 1.png
+
+Background RRGGBBAA: ffffff00
+Area 0:0:1024:512 exported to 48 x 36 pixels (6.32813 dpi)
+Bitmap saved as: test-dirs/cmd/cmd5\drawing 2.png
+
+===
+
+python exporter.py 48
+
+Namespace(height=None, inkscape_path='C:\\Program Files\\Inkscape\\inkscape.exe', input_dir='C:\\Users\\User\\inkscape-batch-exporter', is_android='False', is_drawable='True', is_verbose='True', output_dir='C:\\Users\\User\\inkscape-batch-exporter', width=48)
+
+No svgs found!
+===
