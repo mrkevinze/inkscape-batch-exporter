@@ -3,8 +3,6 @@
 ## Introduction
 A Python script which exports all Inkscape svg files in a given directory to png files. This utility negates the need to manually export each svg using the Inkscape GUI, thus freeing up valuable time for more creative work.
 
-This script was designed with Android developers in mind, who need to make multiple density-specific (mdpi to xxxhdpi) png files from a single svg.
-
 ## Notes
 1. Compatible with Python 2.7. 
 2. The export area is the page in the svg. If you need to customize this behavior, look up the `build_command_list` function within `exporter.py`.
@@ -15,15 +13,15 @@ This script was designed with Android developers in mind, who need to make multi
 ### Simple Example
 1. Drag your svg files to a clone of this repository.
 2. Open your command line and cd to this repository.
-3. If your Inkscape program was typically installed, running `python exporter.py` should work.
+3. Run `python exporter.py`.
 4. View the output png files in the repository.
 
-### Typical Usage
+### Typical Usage Example
 Dragging your svg files into the repository is generally a bad idea as it disrupts your existing project setup. You should specify the input and output directories with additional command line options, such as
 
 `python exporter.py -i <input_dir> -o <output_dir>`
 
-Notice that the inputs and outputs are directories (folders), not individual files. After all, this is a batch exporter script.
+Notice that the input and output are directories (folders) and not individual files. After all, this is a batch exporter script.
 
 Also, if you are an Android developer, specify `-a True` to generate density-specific png files.
 
