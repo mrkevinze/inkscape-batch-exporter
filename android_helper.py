@@ -12,7 +12,7 @@ DENSITIES = ("mdpi", "hdpi", "xhdpi", "xxhdpi", "xxxhdpi")
 PX_MULTIPLIERS = (1, 1.5, 2, 3, 4)
 
 
-def get_px_values_at_all_densities(dp):
+def get_px_values_all_densities(dp):
     assert len(DENSITIES) == len(PX_MULTIPLIERS)
 
     px_values = []

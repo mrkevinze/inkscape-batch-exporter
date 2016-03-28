@@ -6,7 +6,7 @@ from android_helper import *
 if __name__ == "__main__":
     dp = 48
     print "Given %ddp, what are the px values from mdpi to xxxhdpi?" % dp
-    print get_px_values_at_all_densities(dp)
+    print get_px_values_all_densities(dp)
     print ""
 
     test_dir = (os.getcwd() + os.path.sep + "test-dirs" +
