@@ -1,9 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-""" Contains utility functions to create Android density-specific
-sub-directories and to convert a density-independent dp value to pixels.
-"""
+"""Contains functions that handle different Android densities."""
 
 import os
 import errno

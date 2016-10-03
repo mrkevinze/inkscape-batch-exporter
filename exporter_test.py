@@ -1,7 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""Test scripts; requires inspection of the print logs and file output.
-See exporter_test_log.txt."""
+
+"""Contains tests for the exporter.
+
+Requires inspection of the print logs and file output.
+See exporter_test_log.txt.
+"""
 
 from exporter import *
 

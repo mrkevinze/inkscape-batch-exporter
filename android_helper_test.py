@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+"""Contains tests for the android_helper."""
+
 from android_helper import *
 
 if __name__ == "__main__":

@@ -1,8 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""Please see README.md for module details as this is the main module of
-the project.
-"""
+
+"""The main module of the project (see README.md)."""
 
 import os
 import argparse
@@ -15,8 +14,7 @@ verbose = True
 
 def export_svgs_for_android(inkscape_path, input_dir, output_dir,
                             is_drawable, width_dp, height_dp):
-    """Exports all svgs within input_dir to pngs and stores them in the
-    Android density-specific sub-directories within output_dir.
+    """Export all svg files to png files for Android.
 
     Args:
         inkscape_path (str): File path to the Inkscape program.
@@ -24,8 +22,8 @@ def export_svgs_for_android(inkscape_path, input_dir, output_dir,
         output_dir (str): Path to the output directory; after this function
             returns, it will contain various density-specific sub-directories,
             which each contain the exported pngs.
-        is_drawable (bool): If True, sub-directories are drawable directories
-            (e.g. drawable-mdpi). Else, they are mipmap directories
+        is_drawable (bool): If True, sub-directories in output_dir are drawable
+            directories (e.g. drawable-mdpi). Else, they are mipmap directories
             (e.g. mipmap-mdpi).
         width_dp (int or None): A blanket option to specify the width of all
             output pngs in the Android dp unit (not the Inkscape dpi unit).
@@ -41,7 +39,7 @@ def export_svgs_for_android(inkscape_path, input_dir, output_dir,
 
         for i in xrange(len(android_helper.DENSITIES)):
             density_specific_output_dir = android_helper.get_child_dir(
-                    output_dir, is_drawable, android_helper.DENSITIES[i])
+                output_dir, is_drawable, android_helper.DENSITIES[i])
 
             png_path = get_png_path(density_specific_output_dir,
                                     get_svg_name(svg_path))
@@ -51,8 +49,7 @@ def export_svgs_for_android(inkscape_path, input_dir, output_dir,
 
 
 def export_svgs(inkscape_path, input_dir, output_dir, width_px, height_px):
-    """Exports all svgs within input_dir to pngs and stores them within
-    output_dir.
+    """Export all svg files to png files.
 
     Args:
         inkscape_path (str): File path to the Inkscape program.
@@ -132,9 +129,7 @@ def execute(shell_command_as_list):
 
 
 def build_command_list(inkscape_path, svg_path, png_path, width_px, height_px):
-    """Builds a list of shell commands necessary to convert a given Inkscape
-    svg file to an output png file.
-    """
+    """Build a list of shell commands needed to export an Inkscape svg."""
     # For more params, see https://inkscape.org/en/doc/inkscape-man.html
     shell_command_as_list = [
         inkscape_path,
